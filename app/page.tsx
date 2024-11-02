@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Header from "./header";
 import HomeHeroSection from "./homeHero";
 
