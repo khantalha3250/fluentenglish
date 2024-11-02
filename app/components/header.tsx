@@ -9,7 +9,7 @@ export default function Header() {
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <Image src="/logo2.png" alt="fluentEnglish Logo" width={40} height={40} />
+          <Image src="/logo2.png" alt="fluentEnglish Logo" width={120} height={120} />
           <h1 className="text-2xl font-semibold text-deepBlue"><i>Fluent English</i></h1>
         </div>
 
