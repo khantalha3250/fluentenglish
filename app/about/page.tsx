@@ -8,7 +8,7 @@ import TransformYourFuture from '../components/trasformyfuture'
 import { useRef } from "react";
 import TeamPage from '../components/teams';
 import RealWorldScenarios from '../components/scenerios';
-const page = () => {
+const Page = () => {
     const transformRef = useRef<HTMLDivElement | null>(null);
 
     const handleLearnMoreClick = () => {
@@ -31,4 +31,4 @@ const page = () => {
       </div>
     );
   }
-export default page
+export default Page
