@@ -1,5 +1,4 @@
-import { FaArrowRight, FaBriefcase, FaGlobe, FaGraduationCap } from 'react-icons/fa';
-import Image from 'next/image';
+import { FaBriefcase, FaGlobe, FaGraduationCap } from 'react-icons/fa';
 export default function TransformYourFuturePage() {
   return (
     <section className="pt-24 min-h-[70vh] bg-gradient-to-b from-softSkyBlue to-lightGray py-12 px-6 sm:px-10 lg:px-20 flex flex-col items-center">

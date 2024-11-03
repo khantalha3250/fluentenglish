@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -32,7 +33,7 @@ const TeamPage: React.FC = () => {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
 
   return (
-   <section className="pt-24 min-h-[70vh] bg-gradient-to-b from-lightGray to-softSkyBlue py-12 px-6 sm:px-10 lg:px-20 flex flex-col items-center">
+    <section className="pt-24 min-h-[70vh] bg-gradient-to-b from-lightGray to-softSkyBlue py-12 px-6 sm:px-10 lg:px-20 flex flex-col items-center">
       {/* Page Title */}
       <h1 className="text-deepBlue text-4xl sm:text-5xl font-extrabold mb-10 text-center drop-shadow-md animate-fadeInUp">
         Meet Our Team
@@ -49,10 +50,12 @@ const TeamPage: React.FC = () => {
           >
             {/* Image */}
             <div className="relative w-full h-40 mb-4">
-              <img
+              <Image
                 src={member.img}
                 alt={`${member.name}`}
-                className="w-full h-full object-cover rounded-lg"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
               />
               <div
                 className={`absolute inset-0 bg-gradient-to-b from-transparent to-deepBlue transition-opacity duration-300 ${
@@ -77,7 +80,7 @@ const TeamPage: React.FC = () => {
             {/* Hover animation for more interaction */}
             {hoveredMember === index && (
               <div className="absolute inset-0 bg-white bg-opacity-50 transition-opacity duration-300 flex justify-center items-center">
-              
+                {/* Add any additional overlay content here */}
               </div>
             )}
           </div>
