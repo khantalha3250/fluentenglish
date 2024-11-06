@@ -2,30 +2,20 @@
 import { useState } from 'react';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
-const testimonials = [
-  {
-    name: "John Doe",
-    feedback: "FluentEnglish has completely transformed my communication skills. The live classes were interactive, and the feedback was invaluable.",
-    location: "New York, USA",
-  },
-  {
-    name: "Jane Smith",
-    feedback: "I love how engaging the platform is. The language exchange programs allowed me to practice with native speakers, boosting my confidence.",
-    location: "London, UK",
-  },
-  {
-    name: "Maria Garcia",
-    feedback: "The interactive exercises made learning fun and effective. I've seen a significant improvement in my fluency.",
-    location: "Madrid, Spain",
-  },
-  {
-    name: "Ahmed Hassan",
-    feedback: "The instructors were professional, and the resources available were very useful. I feel much more confident speaking English now.",
-    location: "Cairo, Egypt",
-  },
-];
+// Testimonial Interface
+interface Testimonial {
+  name: string;
+  feedback: string;
+  location: string;
+}
 
-const TestimonialCard: React.FC<{ name: string; feedback: string; location: string }> = ({ name, feedback, location }) => {
+// Props Interface for TestimonialsPage
+interface TestimonialsProps {
+  title: string;
+  testimonials: Testimonial[];
+}
+
+const TestimonialCard: React.FC<Testimonial> = ({ name, feedback, location }) => {
   return (
     <div className="bg-white shadow-xl rounded-lg p-6 mb-8 sm:mb-0 mx-2 transform transition-transform hover:scale-105 hover:shadow-2xl duration-300">
       {/* Quote Icons */}
@@ -46,9 +36,10 @@ const TestimonialCard: React.FC<{ name: string; feedback: string; location: stri
   );
 };
 
-const TestimonialsPage: React.FC = () => {
+const TestimonialsPage: React.FC<TestimonialsProps> = ({ title, testimonials }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
+  // Handlers for next/prev buttons in mobile view
   const handleNext = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
@@ -58,13 +49,13 @@ const TestimonialsPage: React.FC = () => {
   };
 
   return (
-    <section className="min-h-[70vh] bg-gradient-to-b from-softSkyBlue to-lightGray px-6 sm:px-10 py-16">
+    <section className="min-h-[60vh] bg-gradient-to-b from-lightGray to-softSkyBlue px-6 sm:px-10 py-16">
       {/* Page Title */}
       <h1 className="text-deepBlue text-4xl sm:text-5xl font-extrabold mb-10 text-center drop-shadow-md">
-        What Our Students Say
+        {title}
       </h1>
 
-      {/* Testimonial Cards - Desktop */}
+      {/* Testimonial Cards - Desktop View */}
       <div className="hidden lg:grid grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <TestimonialCard
@@ -76,7 +67,7 @@ const TestimonialsPage: React.FC = () => {
         ))}
       </div>
 
-      {/* Testimonial Carousel - Mobile */}
+      {/* Testimonial Carousel - Mobile View */}
       <div className="lg:hidden flex flex-col items-center">
         <TestimonialCard
           name={testimonials[currentTestimonial].name}

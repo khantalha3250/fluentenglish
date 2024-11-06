@@ -39,7 +39,7 @@ export default function Header() {
 
         {/* Call-to-Action Button (Desktop) */}
         <div className="hidden md:flex items-center">
-          <Link href="/signup" passHref>
+          <Link href="/classes" passHref>
             <span className="bg-deepBlue text-white px-6 py-2 rounded-full shadow-md hover:bg-lightBlue hover:shadow-lg transition duration-300 ease-in-out">
               Get Started
             </span>
@@ -67,7 +67,7 @@ export default function Header() {
           <Link href="/contact" passHref>
             <span onClick={toggleMenu} className="text-darkGray hover:text-deepBlue transition duration-300">Contact</span>
           </Link>
-          <Link href="/signup" passHref>
+          <Link href="/classes" passHref>
             <span onClick={toggleMenu} className="bg-deepBlue text-white px-6 py-2 rounded-full shadow-md hover:bg-lightBlue transition duration-300">
               Get Started
             </span>

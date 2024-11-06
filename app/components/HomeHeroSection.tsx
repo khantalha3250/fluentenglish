@@ -11,9 +11,9 @@ const HomeHeroSection = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-[70vh] text-center px-6 sm:px-10 bg-gradient-to-b from-lightGray to-softSkyBlue">
+    <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-6 sm:px-10 bg-gradient-to-b from-lightGray to-softSkyBlue">
       {/* Tagline */}
-      <h2 className="text-darkGray text-lg sm:text-xl lg:text-2xl font-light mb-2">
+      <h2 className="text-darkGray text-lg sm:text-xl lg:text-2xl font-light mb-2 pt-20">
         Boost Your English Communication Skills
       </h2>
 

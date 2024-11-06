@@ -1,13 +1,13 @@
 
 "use client";
 import React from 'react'
-import Motivation from '../components/motivation'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import TransformYourFuture from '../components/trasformyfuture'
+import Motivation from '../components/MotivationPage'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import TransformYourFuture from '../components/TransformYourFuturePage'
 import { useRef } from "react";
-import TeamPage from '../components/teams';
-import RealWorldScenarios from '../components/scenerios';
+import TeamPage from '../components/Teams';
+import RealWorldScenarios from '../components/RealWorldScenarios';
 const Page = () => {
     const transformRef = useRef<HTMLDivElement | null>(null);
 
