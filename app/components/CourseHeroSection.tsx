@@ -27,8 +27,9 @@ const CourseHeroSection: React.FC<CourseHeroSectionProps> = ({
 
   return (
     <section
-      className={`flex flex-col items-center justify-center min-h-[60vh] text-center px-6 sm:px-10 ${backgroundColor}`}
-    >
+  className={`flex flex-col items-center justify-center min-h-[60vh] text-center px-6 sm:px-10 ${backgroundColor} pt-24 md:pt-0`}
+>
+
       {/* Headline */}
       <h1 className="text-deepBlue text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mt-4 drop-shadow-md transition-transform transform hover:scale-105 duration-300">
         {headline}
