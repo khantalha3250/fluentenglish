@@ -94,8 +94,8 @@ const Page = () => {
     />
     <KeyCourseBenefitsPage 
       benefits={keyCourseBenefits}
-      buttonText="View All Plans"
-      buttonLink="/pricing"
+      buttonText="Join Now"
+      buttonLink="/join"
     />
     <TestimonialsPage title="What Our Students Say" testimonials={testimonialsData} />
     <FAQPage title="Frequently Asked Questions" faqItems={faqData} />

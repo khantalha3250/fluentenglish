@@ -94,8 +94,8 @@ export default function KidsCoursePage() {
     />
     <KeyCourseBenefitsPage 
       benefits={kidFriendlyHighlights}
-      buttonText="View Class Schedules"
-      buttonLink="/schedules"
+      buttonText="Join Now"
+      buttonLink="/join"
     />
     
     <TestimonialsPage title="What Our Students Say" testimonials={testimonialsData} />

@@ -111,9 +111,9 @@ const CoursesPage: React.FC = () => {
         <p className="text-center text-darkGray text-lg sm:text-xl mb-6">
           Not sure which course is right for you? Contact us for a free consultation!
         </p>
-        <button className="bg-brightYellow text-deepBlue px-8 py-3 rounded-full font-semibold shadow-lg transition-transform hover:scale-105">
+        <Link href="/contact"><button className="bg-brightYellow text-deepBlue px-8 py-3 rounded-full font-semibold shadow-lg transition-transform hover:scale-105">
           Get in Touch
-        </button>
+        </button></Link>
       </div>
     </section>
   );

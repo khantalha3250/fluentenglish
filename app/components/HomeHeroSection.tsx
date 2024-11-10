@@ -30,7 +30,7 @@ const HomeHeroSection = () => {
       {/* Buttons */}
       <div className="mt-8 flex flex-col sm:flex-row gap-4">
         {/* Join Now Button */}
-        <Link href="/join">
+        <Link href="/classes">
           <button 
             onClick={handleJoinNowClick} 
             className="bg-deepBlue text-white px-8 py-3 rounded-lg shadow-lg hover:bg-lightBlue hover:scale-105 transform transition-all duration-300 ease-in-out">

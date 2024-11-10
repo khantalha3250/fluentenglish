@@ -96,7 +96,7 @@ export default function Page() {
      <KeyCourseBenefitsPage 
       benefits={homemakerBenefits}
       buttonText="Join Homemaker Program"
-      buttonLink="/homemaker-program"
+      buttonLink="/join"
     />
     
     <TestimonialsPage title="What Our Students Say" testimonials={testimonialsData} />
