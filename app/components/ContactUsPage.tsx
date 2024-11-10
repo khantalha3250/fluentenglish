@@ -11,8 +11,10 @@ const ContactUsPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+    const whatsappMessage = `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+    window.open(`https://api.whatsapp.com/send?phone=917400363250&text=${encodeURIComponent(whatsappMessage)}`);
   };
+  
 
   return (
     <section className="min-h-[80vh] py-16 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-lightGray to-softSkyBlue flex flex-col items-center animate-fadeInUp pt-28 md:pt-48">
