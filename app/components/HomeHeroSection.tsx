@@ -19,7 +19,7 @@ const HomeHeroSection = () => {
 
       {/* Main Heading */}
       <h1 className="text-deepBlue text-3xl sm:text-4xl lg:text-6xl font-extrabold leading-snug mt-2 drop-shadow-lg">
-        FLUENT ENGLISH <br /> MASTER YOUR SPEAKING SKILLS
+        FLUENTT ENGLISH LIVE <br /> MASTER YOUR SPEAKING CLASS
       </h1>
 
       {/* Description */}
