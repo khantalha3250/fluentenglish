@@ -79,14 +79,14 @@ const Page = () => {
         <Header/>
         <CourseHeroSection
       headline="Level Up Your English – Without Breaking the Bank"
-      subheadline="Professional English fluency starts at just 2000! Perfect for busy professionals looking to advance in their careers."
+      subheadline="Achieve professional English fluency quickly—Ideal for busy professionals aiming to excel in their careers."
       ctaLink="/join"
       ctaHoveredText="Book Your Trial Class Now"
       ctaNormalText="Try Your First Class – For Free!"
       learnMoreLink="/about"
     />
      <WhatWeOfferPage 
-      title="What We Offer"
+      title="Why this course is perfect for Working professionals ,Business owner, self employed."
       infoText="Explore the unique offerings that make our language courses stand out."
       offerings={offerings}
       ctaText="Book Your Trial Class Now!"
