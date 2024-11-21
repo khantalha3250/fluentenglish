@@ -1,5 +1,5 @@
 "use client";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin,FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -51,6 +51,9 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-end space-x-4 mt-4">
+          <Link href="https://api.whatsapp.com/send?phone=917400363250">
+              <FaWhatsapp className="text-white hover:text-brightYellow transition-colors duration-200 text-2xl" />
+            </Link>
             <Link href="https://facebook.com">
               <FaFacebook className="text-white hover:text-brightYellow transition-colors duration-200 text-2xl" />
             </Link>

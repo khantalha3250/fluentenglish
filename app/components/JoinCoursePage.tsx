@@ -27,7 +27,7 @@ const JoinCoursePage: React.FC = () => {
     })
       .then((response) => {
         if (response.ok) {
-          alert("Thank you! Your form has been submitted successfully.");
+          alert("Thank you! Your form has been submitted successfully. We will contact you soon.");
         } else {
           throw new Error("Submission failed.");
         }

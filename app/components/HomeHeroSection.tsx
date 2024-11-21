@@ -21,7 +21,7 @@ const HomeHeroSection = () => {
           src="/img2.png" // Replace with the actual background image path
           alt="Background"
           fill
-          className="object-cover object-center opacity-60"
+          className="object-contain sm:object-cover object-center opacity-60"
           priority
         />
       </div>

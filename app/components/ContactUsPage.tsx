@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -14,7 +14,6 @@ const ContactUsPage = () => {
     const whatsappMessage = `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
     window.open(`https://api.whatsapp.com/send?phone=917400363250&text=${encodeURIComponent(whatsappMessage)}`);
   };
-  
 
   return (
     <section className="min-h-[80vh] py-16 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-lightGray to-softSkyBlue flex flex-col items-center animate-fadeInUp pt-28 md:pt-48">
@@ -40,6 +39,19 @@ const ContactUsPage = () => {
           <FaMapMarkerAlt className="text-4xl text-brightYellow mb-2" />
           <span>123 Fluent St., Language City, ENG</span>
         </div>
+      </div>
+
+      {/* WhatsApp Section */}
+      <div className="flex items-center justify-center gap-4 mb-12 p-4 bg-white rounded-lg shadow-lg hover:scale-105 transform transition-transform duration-300 ease-in-out">
+        <FaWhatsapp className="text-green-500 text-3xl" />
+        <a
+          href="https://api.whatsapp.com/send?phone=917400363250"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-deepBlue font-bold text-lg hover:text-lightBlue transition-colors"
+        >
+          Chat with us on WhatsApp 
+        </a>
       </div>
 
       {/* Form Section */}
@@ -77,12 +89,16 @@ const ContactUsPage = () => {
             required
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="w-full bg-deepBlue text-white py-3 rounded-lg hover:bg-lightBlue hover:scale-105 transform transition-all duration-300 ease-in-out shadow-lg"
-        >
-          Send Message
-        </button>
+        <div className="w-full max-w-xs mx-auto bg-deepBlue text-white flex items-center justify-center gap-3 py-3 px-4 rounded-lg shadow-lg hover:bg-lightBlue transform hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+  <button
+    type="submit"
+    className="text-lg font-semibold flex items-center gap-2 focus:outline-none"
+  >
+    Send Message
+    <FaWhatsapp className="text-green-500 text-2xl" />
+  </button>
+</div>
+
       </form>
     </section>
   );
