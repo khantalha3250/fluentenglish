@@ -4,7 +4,7 @@ import FAQPage from "./components/FAQPage";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomeHeroSection from "./components/HomeHeroSection";
-import InteractiveImageSection from "./components/InteractiveImageSection";
+// import InteractiveImageSection from "./components/InteractiveImageSection";
 // import MotivationPage from "./components/Services";
 import TestimonialsPage from "./components/Testimonial";
 
