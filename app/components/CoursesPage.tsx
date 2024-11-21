@@ -7,14 +7,14 @@ const courses = [
     title: "English for Professionals",
     headline: "Level Up Your English – Without Breaking the Bank",
     subheadline:
-      "Professional English fluency starts at just 2000! Perfect for busy professionals looking to advance in their careers.",
-    cta: "Start Today for Only 2000!",
+      "It's a perfect program for working professionals to start improving their English fluency level in an affordable price, even with a busy schedule, to advance in their careers.",
+    cta: "Start your Free Class",
     link: "/classes/courseone",  // Add link for each course
     benefits: [
       "Affordable Excellence",
       "Flexible Scheduling",
       "Career-Centric Skills",
-      "Live, Interactive Classes",
+      "Live, Personalizes Interactions",
       "Practical, Relevant Content",
       "Flexible Payment Plans",
     ],
@@ -24,7 +24,7 @@ const courses = [
     headline: "Speak English with Confidence from Home!",
     subheadline:
       "Affordable and flexible English classes, designed for busy homemakers.",
-    cta: "Join for Just 2000 – Start Today!",
+    cta: "Join Our Free Trial– Start Today!",
     link: "/classes/coursetwo",  // Add link for each course
     benefits: [
       "Affordable and Accessible",
@@ -40,7 +40,7 @@ const courses = [
     headline: "Fun and Engaging English Classes for Kids!",
     subheadline:
       "Boost your child’s confidence and communication skills through interactive, affordable lessons.",
-    cta: "Enroll Now for Just 2000!",
+    cta: "Enroll Now for Free Trial Class",
     link: "classes/coursethree",  // Add link for each course
     benefits: [
       "Interactive Learning",
@@ -59,7 +59,7 @@ const CoursesPage: React.FC = () => {
   return (
     <section className="min-h-screen bg-gradient-to-b from-softSkyBlue to-lightGray py-16 px-6 sm:px-10 lg:px-24">
       {/* Page Header */}
-      <h1 className="text-deepBlue text-4xl sm:text-5xl font-bold text-center mb-10 drop-shadow-md animate-fadeInUp pt-40">
+      <h1 className="text-deepBlue text-4xl sm:text-5xl font-bold text-center mb-10 drop-shadow-md animate-fadeInUp pt-10">
         Choose the Perfect English Course
       </h1>
 

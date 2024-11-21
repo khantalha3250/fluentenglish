@@ -13,7 +13,7 @@ const offerings = [
     icon: FaDollarSign,
     title: "Affordable and Accessible",
     description: "High-quality English education designed to fit every budget, so you can start your learning journey without financial strain.",
-    highlightText: "Only 2000!"
+    highlightText: "At Affordable Price!"
   },
   {
     icon: FaClock,
@@ -82,15 +82,15 @@ export default function Page() {
       headline="Speak English with Confidence from Home!"
       subheadline="Affordable and flexible English classes, designed for busy homemakers."
       ctaLink="/join"
-      ctaHoveredText="Start Today for Only 2000!"
-      ctaNormalText="Try Your First Class – Only 2000!"
+      ctaHoveredText="Book Your Trial Class Now"
+      ctaNormalText="Try Your First Class – For Free!"
       learnMoreLink="/about"
     />
     <WhatWeOfferPage 
       title="Why This Course is Perfect for Homemakers"
       infoText="Our English course is tailored for homemakers, offering a flexible, affordable, and community-driven approach to language learning. Empower yourself and gain confidence in your English skills at your convenience."
       offerings={offerings}
-      ctaText="Join Now for Only 2000!"
+      ctaText="Book You Free Trial Class"
       ctaLink="/join"
     />
      <KeyCourseBenefitsPage 

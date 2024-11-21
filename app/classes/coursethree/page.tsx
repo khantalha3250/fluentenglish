@@ -81,8 +81,8 @@ export default function KidsCoursePage() {
       headline="Fun and Engaging English Classes for Kids!"
       subheadline="Boost your child’s confidence and communication skills through interactive, affordable lessons."
       ctaLink="/join"
-      ctaHoveredText="Start Today for Only 2000!"
-      ctaNormalText="Try Your First Class – Only 2000!"
+  ctaHoveredText="Book Your Trial Class Now"
+      ctaNormalText="Try Your First Class – For Free!"
       learnMoreLink="/about"
     />
     <WhatWeOfferPage 

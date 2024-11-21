@@ -11,8 +11,8 @@ const offerings = [
   {
     icon: FaDollarSign,
     title: "Affordable Excellence",
-    description: "World-class English training at a price that suits everyone. Our courses start at only",
-    highlightText: "2000!"
+    description: "World-class English fluency preparation with personnel tutor at affordable price with easy payment plan",
+    highlightText: ""
   },
   {
     icon: FaClock,
@@ -81,15 +81,15 @@ const Page = () => {
       headline="Level Up Your English – Without Breaking the Bank"
       subheadline="Professional English fluency starts at just 2000! Perfect for busy professionals looking to advance in their careers."
       ctaLink="/join"
-      ctaHoveredText="Start Today for Only 2000!"
-      ctaNormalText="Try Your First Class – Only 2000!"
+      ctaHoveredText="Book Your Trial Class Now"
+      ctaNormalText="Try Your First Class – For Free!"
       learnMoreLink="/about"
     />
      <WhatWeOfferPage 
       title="What We Offer"
       infoText="Explore the unique offerings that make our language courses stand out."
       offerings={offerings}
-      ctaText="Start Learning for Only 2000!"
+      ctaText="Book Your Trial Class Now!"
       ctaLink="/join"
     />
     <KeyCourseBenefitsPage 
