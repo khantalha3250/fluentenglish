@@ -1,6 +1,6 @@
 "use client";
-import { useState } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 interface FAQItem {
   question: string;
@@ -17,8 +17,9 @@ const FAQItemComponent: React.FC<{ item: FAQItem }> = ({ item }) => {
 
   return (
     <div
-      className={`bg-white shadow-lg rounded-lg p-6 mb-4 transition-all duration-300 transform hover:scale-105 ${isOpen ? 'shadow-2xl' : ''
-        }`}
+      className={`bg-white shadow-lg rounded-lg p-6 mb-4 transition-all duration-300 transform hover:scale-105 ${
+        isOpen ? "shadow-2xl" : ""
+      }`}
     >
       <div
         className="flex justify-between items-center cursor-pointer"
@@ -39,6 +40,10 @@ const FAQItemComponent: React.FC<{ item: FAQItem }> = ({ item }) => {
 };
 
 const FAQPage: React.FC<FAQPageProps> = ({ title, faqItems }) => {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedFAQs = showAll ? faqItems : faqItems.slice(0, 3);
+
   return (
     <section className="min-h-[70vh] bg-gradient-to-b from-softSkyBlue to-lightGray px-6 sm:px-10 py-16">
       {/* Page Title */}
@@ -48,10 +53,23 @@ const FAQPage: React.FC<FAQPageProps> = ({ title, faqItems }) => {
 
       {/* FAQ Section */}
       <div className="max-w-4xl mx-auto">
-        {faqItems.map((item, index) => (
+        {displayedFAQs.map((item, index) => (
           <FAQItemComponent key={index} item={item} />
         ))}
       </div>
+
+      {/* Show More/Less Button */}
+      {faqItems.length > 3 && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="flex items-center gap-2 bg-deepBlue text-white px-6 py-3 rounded-lg shadow-lg hover:bg-lightBlue hover:scale-105 transform transition-all duration-300 ease-in-out"
+          >
+            {showAll ? "Show Less" : "Show More"}
+            {showAll ? <FaChevronUp /> : <FaChevronDown />}
+          </button>
+        </div>
+      )}
 
       {/* Decorative Elements */}
       <div className="mt-12 flex justify-center space-x-4">

@@ -1,6 +1,6 @@
 "use client";
-import { useState } from 'react';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { useState, useEffect } from "react";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 // Testimonial Interface
 interface Testimonial {
@@ -39,7 +39,15 @@ const TestimonialCard: React.FC<Testimonial> = ({ name, feedback, location }) =>
 const TestimonialsPage: React.FC<TestimonialsProps> = ({ title, testimonials }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  // Handlers for next/prev buttons in mobile view
+  // Auto-slide logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 7000); // 7 seconds
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [testimonials.length]);
+
+  // Handlers for manual navigation
   const handleNext = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
@@ -55,20 +63,9 @@ const TestimonialsPage: React.FC<TestimonialsProps> = ({ title, testimonials }) 
         {title}
       </h1>
 
-      {/* Testimonial Cards - Desktop View */}
-      <div className="hidden lg:grid grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard
-            key={index}
-            name={testimonial.name}
-            feedback={testimonial.feedback}
-            location={testimonial.location}
-          />
-        ))}
-      </div>
-
-      {/* Testimonial Carousel - Mobile View */}
-      <div className="lg:hidden flex flex-col items-center">
+      {/* Testimonial Slider */}
+      <div className="flex flex-col items-center">
+        {/* Testimonial Card */}
         <TestimonialCard
           name={testimonials[currentTestimonial].name}
           feedback={testimonials[currentTestimonial].feedback}
@@ -91,6 +88,8 @@ const TestimonialsPage: React.FC<TestimonialsProps> = ({ title, testimonials }) 
           </button>
         </div>
       </div>
+
+     
     </section>
   );
 };

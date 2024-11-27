@@ -25,7 +25,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/courses">
+              <Link href="/classes">
                 <span className="hover:text-lightBlue transition-colors duration-200">Courses</span>
               </Link>
             </li>
@@ -34,20 +34,16 @@ const Footer = () => {
                 <span className="hover:text-lightBlue transition-colors duration-200">Contact</span>
               </Link>
             </li>
-            <li>
-              <Link href="/faq">
-                <span className="hover:text-lightBlue transition-colors duration-200">FAQ</span>
-              </Link>
-            </li>
+           
           </ul>
         </div>
 
         {/* Contact Info */}
         <div className="md:w-1/3 text-center md:text-right">
           <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>
-          <p className="text-mediumGray">Email: support@fluentenglish.com</p>
-          <p className="text-mediumGray">Phone: +91-8879778179</p>
-          <p className="text-mediumGray">Location: 122 street, Andheri, Mumbai</p>
+          <p className="text-mediumGray">Email: Contact@fluentenglishlive.com</p>
+          <p className="text-mediumGray">Phone:  +91-8454974682</p>
+          <p className="text-mediumGray">11/2 First floor , Sakinaka industrial estate,near saki naka metro Andheri East 400072</p>
 
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-end space-x-4 mt-4">
@@ -75,13 +71,18 @@ const Footer = () => {
         <p className="text-mediumGray">© {new Date().getFullYear()} FluentEnglish. All rights reserved.</p>
         <ul className="flex space-x-4 mt-4 sm:mt-0">
           <li>
-            <Link href="/privacy-policy">
+            <Link href="/policy">
               <span className="hover:text-lightBlue transition-colors duration-200">Privacy Policy</span>
             </Link>
           </li>
           <li>
-            <Link href="/terms-of-service">
-              <span className="hover:text-lightBlue transition-colors duration-200">Terms of Service</span>
+            <Link href="/policy">
+              <span className="hover:text-lightBlue transition-colors duration-200">Terms and Conditions</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/policy">
+              <span className="hover:text-lightBlue transition-colors duration-200">Refund and Cancellation Policy</span>
             </Link>
           </li>
         </ul>

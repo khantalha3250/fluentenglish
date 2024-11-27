@@ -34,7 +34,7 @@ const HomeHeroSection = () => {
         </h2>
 
         {/* Main Heading */}
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-deepBlue to-lightBlue text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-snug mt-4 drop-shadow-lg">
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-deepBlue to-lightBlue text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-snug mt-4 sm:pb-0 pb-10 drop-shadow-lg">
           FLUENTT ENGLISH LIVE
         </h1>
 

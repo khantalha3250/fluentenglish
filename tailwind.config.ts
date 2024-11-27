@@ -20,6 +20,7 @@ const config: Config = {
         vibrantCoral: '#FF6B6B',
       },
     },
+    
   },
   plugins: [],
 };
