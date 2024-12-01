@@ -9,7 +9,7 @@ const Footer = () => {
         
         {/* Logo and Description */}
         <div className="md:w-1/3 text-center md:text-left">
-          <h2 className="text-2xl font-bold text-white">FluentEnglish</h2>
+          <h2 className="text-2xl font-bold text-white">Fluentt English</h2>
           <p className="text-mediumGray mt-4 max-w-sm">
             Unlock your English fluency with interactive live classes and practical modules designed to help you speak confidently and accurately in any situation.
           </p>

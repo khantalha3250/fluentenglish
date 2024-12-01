@@ -1,3 +1,4 @@
+// https://script.google.com/macros/s/AKfycbx4y1aDHxuZaauHEr0_Z31fuQMJp4AxSvdo7GuEXrFIditmKeCkGW57-GnYP9PsySLz/exec"use client";
 "use client";
 import { useState } from "react";
 
@@ -6,14 +7,22 @@ const JoinCoursePage: React.FC = () => {
     name: "",
     email: "",
     phoneNumber: "",
+    countryCode: "+91", // Default country code
     currentLevel: "",
     preferredSlot: "",
     budget: "",
   });
 
-  const [alert, setAlert] = useState<{ message: string; type: "success" | "error" } | null>(null);
+  const [alert, setAlert] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -31,13 +40,15 @@ const JoinCoursePage: React.FC = () => {
       .then((response) => {
         if (response.ok) {
           setAlert({
-            message: "Thank you for your interest! Stay connected—we’ll be reaching out to you soon",
+            message:
+              "Thank you for your interest! Stay connected—we’ll be reaching out to you soon",
             type: "success",
           });
           setFormData({
             name: "",
             email: "",
             phoneNumber: "",
+            countryCode: "+1",
             currentLevel: "",
             preferredSlot: "",
             budget: "",
@@ -64,7 +75,8 @@ const JoinCoursePage: React.FC = () => {
         BOOK YOUR TRIAL CLASS NOW
       </h1>
       <p className="text-darkGray text-lg sm:text-xl max-w-2xl text-center mb-10 font-light leading-relaxed animate-fadeInUp">
-        Join us for a free trial class! Simply fill out the form below to get started on your journey.
+        Join us for a free trial class! Simply fill out the form below to get
+        started on your journey.
       </p>
 
       {/* Alert Box */}
@@ -103,23 +115,48 @@ const JoinCoursePage: React.FC = () => {
           />
         </div>
 
-        {/* Phone Number */}
+        {/* Phone Number with Country Code */}
         <div className="mb-4">
-          <label className="block text-deepBlue font-semibold mb-2">Phone Number</label>
-          <input
-            type="tel"
-            name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleInputChange}
-            required
-            className="w-full px-4 py-2 border border-lightGray rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-lightBlue transition-all duration-300"
-            placeholder="Enter your phone number"
-          />
+          <label className="block text-deepBlue font-semibold mb-2">
+            Phone Number
+          </label>
+          <div className="flex items-center space-x-2">
+            <select
+              name="countryCode"
+              value={formData.countryCode}
+              onChange={handleInputChange}
+              required
+              className="px-3 py-2 border border-lightGray rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-lightBlue transition-all duration-300 bg-white"
+            >
+              <option value="+1">+1 (US)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+91">+91 (India)</option>
+              <option value="+977">+977 (Nepal)</option>
+              <option value="+92">+92 (Pakistan)</option>
+              <option value="+880">+880 (Bangladesh)</option>
+              <option value="+93">+93 (Afghanistan)</option>
+              <option value="+61">+61 (Australia)</option>
+              <option value="+81">+81 (Japan)</option>
+              <option value="+49">+49 (Germany)</option>
+              {/* Add more country codes as needed */}
+            </select>
+            <input
+              type="tel"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-2 border border-lightGray rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-lightBlue transition-all duration-300"
+              placeholder="Enter your phone number"
+            />
+          </div>
         </div>
 
         {/* Email */}
         <div className="mb-4">
-          <label className="block text-deepBlue font-semibold mb-2">Email</label>
+          <label className="block text-deepBlue font-semibold mb-2">
+            Email
+          </label>
           <input
             type="email"
             name="email"
@@ -133,7 +170,9 @@ const JoinCoursePage: React.FC = () => {
 
         {/* Current Level */}
         <div className="mb-4">
-          <label className="block text-deepBlue font-semibold mb-2">Select Your Current Level</label>
+          <label className="block text-deepBlue font-semibold mb-2">
+            Select Your Current Level
+          </label>
           <select
             name="currentLevel"
             value={formData.currentLevel}
@@ -144,15 +183,23 @@ const JoinCoursePage: React.FC = () => {
             <option value="" disabled>
               Choose your level
             </option>
-            <option value="Basic Level">Basic Level (Beginner to Intermediate)</option>
-            <option value="Intermediate Level">Intermediate Level (Good to Advanced)</option>
-            <option value="Advanced Level">Advanced Level (Business Communication)</option>
+            <option value="Basic Level">
+              Basic Level (Beginner to Intermediate)
+            </option>
+            <option value="Intermediate Level">
+              Intermediate Level (Good to Advanced)
+            </option>
+            <option value="Advanced Level">
+              Advanced Level (Business Communication)
+            </option>
           </select>
         </div>
 
         {/* Preferred Slot */}
         <div className="mb-4">
-          <label className="block text-deepBlue font-semibold mb-2">Preferred Date and Time Slot</label>
+          <label className="block text-deepBlue font-semibold mb-2">
+            Preferred Date and Time Slot
+          </label>
           <input
             type="text"
             name="preferredSlot"
@@ -166,7 +213,9 @@ const JoinCoursePage: React.FC = () => {
 
         {/* Budget */}
         <div className="mb-6">
-          <label className="block text-deepBlue font-semibold mb-2">Your Budget</label>
+          <label className="block text-deepBlue font-semibold mb-2">
+            Your Budget
+          </label>
           <select
             name="budget"
             value={formData.budget}
@@ -177,7 +226,9 @@ const JoinCoursePage: React.FC = () => {
             <option value="" disabled>
               Select your budget
             </option>
-            <option value="15k and above">15k and above (Long-term practice)</option>
+            <option value="15k and above">
+              15k and above (Long-term practice)
+            </option>
             <option value="10k to 15k">10k to 15k</option>
             <option value="7.5k to 10k">7.5k to 10k</option>
             <option value="5k to 7.5k">5k to 7.5k</option>
