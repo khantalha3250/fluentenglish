@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-lightGray shadow-lg py-4 px-6 lg:px-10 fixed top-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-lightGray shadow-lg py-4 px-4 lg:px-10 fixed top-0 w-full z-50 transition-transform duration-300 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       } ${roboto.className}`}
     >
@@ -47,7 +47,7 @@ export default function Header() {
         {/* Logo and Title */}
        {/* Logo and Title */}
 <div className="flex items-center space-x-3">
-<div className="relative w-12 sm:w-12">
+<div className="relative w-30 sm:w-30">
   <Image
     src="/logo2.png"
     alt="FluentEnglish Logo"
