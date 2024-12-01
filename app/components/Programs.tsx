@@ -29,7 +29,7 @@ export default function Programs() {
           ],
         },
         {
-          title: "Program 2: From Intermediate to Advanced Level",
+          title: "From Intermediate to Advanced Level",
           variants: [
             {
               name: "Fastened Program",
@@ -55,7 +55,7 @@ export default function Programs() {
           ],
         },
         {
-          title: "Program 3: For Kids (Ages 7-15)",
+          title: "For Kids (Ages 7-15)",
           variants: [
             {
               name: "Extended Program",

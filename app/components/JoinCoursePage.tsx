@@ -22,7 +22,7 @@ const JoinCoursePage: React.FC = () => {
     e.preventDefault();
 
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbx4y1aDHxuZaauHEr0_Z31fuQMJp4AxSvdo7GuEXrFIditmKeCkGW57-GnYP9PsySLz/exec"; // Replace with your Web App URL
+      "https://script.google.com/macros/s/AKfycbxLGK7vu3JoZBYOyK4TGKanLisoCpOzGq-yVPirm0xsu5-Z_HflFHJLIcoF8pRqS2-D/exec"; // Replace with your Web App URL
 
     fetch(scriptURL, {
       method: "POST",
@@ -87,7 +87,7 @@ const JoinCoursePage: React.FC = () => {
       <form
         name="join-course-form"
         onSubmit={handleSubmit}
-        className="w-full max-w-lg bg-white shadow-xl rounded-lg p-8 animate-fadeInUp transition-transform duration-300 ease-in-out transform hover:scale-105"
+        className="w-full text-deepBlue max-w-lg bg-white shadow-xl rounded-lg p-8 animate-fadeInUp transition-transform duration-300 ease-in-out transform hover:scale-105 te"
       >
         {/* Name */}
         <div className="mb-4">

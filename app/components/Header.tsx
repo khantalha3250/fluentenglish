@@ -47,16 +47,18 @@ export default function Header() {
         {/* Logo and Title */}
        {/* Logo and Title */}
 <div className="flex items-center space-x-3">
-  <div className="relative w-12 sm:w-16">
-    <Image
-      src="/logo2.png"
-      alt="FluentEnglish Logo"
-      width={120} // Optional if dynamic height is applied
-      height={120} // Optional if dynamic height is applied
-      className="w-full h-auto object-contain" // Maintains aspect ratio
-      priority
-    />
-  </div>
+<div className="relative w-30 sm:w-30">
+  <Image
+    src="/logo2.png"
+    alt="FluentEnglish Logo"
+    width={100} // Provide width and height for aspect ratio reference
+    height={100}
+    className="object-contain"
+    priority
+   
+  />
+</div>
+
   <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-deepBlue flex items-center">
     Fluentt English
     <span className="ml-2 text-brightYellow bg-deepBlue px-2 py-1 rounded-md text-sm sm:text-base font-bold uppercase animate-pulse">
