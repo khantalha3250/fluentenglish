@@ -1,7 +1,7 @@
 // components/RealWorldScenarios.tsx
 
 import Image from 'next/image';
-
+import Link from "next/link";
 export default function RealWorldScenarios() {
   return (
     <section className="pt-24 min-h-[70vh] bg-gradient-to-b from-softSkyBlue to-lightGray py-12 px-6 sm:px-10 lg:px-20 flex flex-col items-center">
@@ -27,9 +27,11 @@ export default function RealWorldScenarios() {
         <h2 className="text-deepBlue text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 transition-all duration-300 ease-in-out">
           Ready to Transform?
         </h2>
+        <Link href="/join">
         <button className="bg-brightYellow text-darkGray font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-vibrantCoral hover:text-white transition-transform duration-300 transform hover:scale-105 animate-bounce">
           Start Your Journey
         </button>
+        </Link>
       </div>
     </section>
   );

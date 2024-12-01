@@ -26,7 +26,12 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/classes">
-                <span className="hover:text-lightBlue transition-colors duration-200">Courses</span>
+                <span className="hover:text-lightBlue transition-colors duration-200">MasterClasses</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/programs">
+                <span className="hover:text-lightBlue transition-colors duration-200">Programs</span>
               </Link>
             </li>
             <li>
@@ -41,13 +46,13 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="md:w-1/3 text-center md:text-right">
           <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>
-          <p className="text-mediumGray">Email: Contact@fluentenglishlive.com</p>
+          <p className="text-mediumGray">Email: contact@fluenttenglishlive.com</p>
           <p className="text-mediumGray">Phone:  +91-8454974682</p>
           <p className="text-mediumGray">11/2 First floor , Sakinaka industrial estate,near saki naka metro Andheri East 400072</p>
 
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-end space-x-4 mt-4">
-          <Link href="https://api.whatsapp.com/send?phone=917400363250">
+          <Link href="https://api.whatsapp.com/send?phone=917045337426">
               <FaWhatsapp className="text-white hover:text-brightYellow transition-colors duration-200 text-2xl" />
             </Link>
             <Link href="https://facebook.com">

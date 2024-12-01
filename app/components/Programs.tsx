@@ -116,7 +116,7 @@ export default function Programs() {
         {/* WhatsApp Button */}
         <div className="mt-6 flex justify-center">
   <a
-    href="https://api.whatsapp.com/send?phone=917400363250"
+    href="https://api.whatsapp.com/send?phone=917045337426"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center gap-2 bg-brightYellow text-darkGray font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
@@ -149,7 +149,7 @@ export default function Programs() {
               {/* Book Free Trial Button */}
               <div className="mt-6 text-center">
                 <a
-                  href="/free-trial"
+                  href="/join"
                   className="bg-deepBlue text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-lightBlue transition duration-300"
                 >
                   Book a Free Trial

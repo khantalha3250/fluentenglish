@@ -13,12 +13,12 @@ export default function Policies() {
          <h2 className="text-deepBlue font-semibold mb-4 pt-12 text-xl sm:text-3xl lg:text-4xl">
             Privacy Policy
           </h2>
-          <p className="leading-7 mb-4 pt-2 text-sm sm:text-lg lg:text-xl">
+          <p className="leading-7 text-gray-700 mb-4 pt-2 text-sm sm:text-lg lg:text-xl">
             The terms <strong>"We" / "Us" / "Our" / "Company"</strong> refer to
             Fluentt English Live Education, and the terms{" "}
             <strong>"You" / "Your" / "Yourself"</strong> refer to the users.
           </p>
-          <p className="leading-7 mb-4 pt-2 text-sm sm:text-lg lg:text-xl">
+          <p className="leading-7 text-gray-700 mb-4 pt-2 text-sm sm:text-lg lg:text-xl">
           This Privacy Policy is an electronic record in the form of an electronic contract formed under the information Technology Act, 2000 and the rules made thereunder and the amended provisions pertaining to electronic documents / records in various statutes as amended by the information Technology Act, 2000. This Privacy Policy does not require any physical, electronic or digital signature.
 
 This Privacy Policy is a legally binding document between you and company. The terms of this Privacy Policy will be effective upon your acceptance of the same (directly or indirectly in electronic form, by clicking on the I accept tab or by use of the website or by other means) and will govern the relationship between you and Company for your use of the website..
@@ -29,16 +29,16 @@ Please read this Privacy Policy carefully by using the Website, you indicate tha
 
 
           </p>
-          <p className="leading-7 mb-4 pt-2 text-sm sm:text-lg lg:text-xl">
+          <p className="leading-7 text-gray-700 mb-4 pt-2 text-sm sm:text-lg lg:text-xl">
           By providing us your Information or by making use of the facilities provided by the Website, You hereby consent to the collection, storage, processing and transfer of any or all of Your Personal Information and Non-Personal Information by us as specified under this Privacy Policy. You further agree that such collection, use, storage and transfer of Your Information shall not cause any loss or wrongful gain to you or any other person.
           </p>
 
           {/* Add collapsible sections for readability */}
           <details className="bg-soft-sky-blue px-4 py-3 rounded-md mb-4">
-            <summary className="cursor-pointer font-medium text-primary">
+            <summary className="cursor-pointer text-gray-700 font-medium text-primary">
             USER INFORMATION
             </summary>
-            <p className="text-sm mt-2">
+            <p className="text-sm mt-2 text-gray-700">
             To avail certain services on our Websites, users are required to provide certain information for the registration process namely: - a) your name, b) email address, c) sex, d) age, e) PIN code, f) medical records and history g) sexual orientation, h) biometric information, i) password etc., and / or your occupation, interests, and the like. The Information as supplied by the users enables us to improve our sites and provide you the most user-friendly experience.
 
 All required information is service dependent and we may use the above said user information to, maintain, protect, and improve its services (including advertising services) and for developing new services
@@ -47,11 +47,11 @@ Such information will not be considered as sensitive if it is freely available a
             </p>
           </details>
 
-          <details className="bg-soft-sky-blue px-4 py-3 rounded-md mb-4">
+          <details className="bg-soft-sky-blue text-gray-700 px-4 py-3 rounded-md mb-4">
             <summary className="cursor-pointer font-medium text-primary">
               COOKIES AND DATA COLLECTION
             </summary>
-            <p className="text-sm mt-2">
+            <p className="text-sm mt-2 text-gray-700">
             To improve the responsiveness of the sites for our users, we may use "cookies", or similar electronic tools to collect information to assign evey visitor a unique, random number as a User Identification (User ID) to understand the user's individual interests using the Identified Computer. Unless you voluntarily identify yourself (through registration, for example), we will have no way of knowing who you are, even if we assign a cookie to your computer. The only personal information a cookie can contain is information you supply (an example of this is when you ask for our Personalised Horoscope). A cookie cannot read data off your hard drive. Our advertisers may also assign their own cookies to your browser (if you click on their ads), a process that we do not control.
 
 Our web servers automatically collect limited information about your computer's connection to the Internet, including your IP address, when you visit our site. (Your IP address is a number that lets computers attached to the Internet know where to send you data -- such as the web pages you view.) Your IP address does not identify you personally. We use this information to deliver our web pages to you upon request, to tailor our site to the interests of our users, to measure traffic within our site and let advertisers know the geographic locations from where our visitors come.
@@ -68,7 +68,7 @@ We proposes to share such information within its group companies and officers an
             </p>
           </details>
 
-          <details className="bg-soft-sky-blue px-4 py-3 rounded-md mb-4">
+          <details className="bg-soft-sky-blue text-gray-700 px-4 py-3 rounded-md mb-4">
             <summary className="cursor-pointer font-medium text-primary">
              INFORMATION SECURITY
             </summary>
@@ -84,7 +84,7 @@ However the internet is an ever evolving medium. We may change our Privacy Polic
         </section>
 
         {/* Terms and Conditions Section */}
-        <section id="terms-and-conditions" className="mb-10">
+        <section id="terms-and-conditions" className="mb-10 text-gray-700">
          <h2 className="text-deepBlue font-semibold mb-4 pt-12 text-xl sm:text-3xl lg:text-4xl">
             Terms and Conditions
           </h2>
@@ -225,7 +225,7 @@ However the internet is an ever evolving medium. We may change our Privacy Polic
         </section>
 
         {/* Refund and Cancellation Policy Section */}
-        <section id="refund-policy" className="mb-10">
+        <section id="refund-policy" className="mb-10 text-gray-700">
          <h2 className="text-deepBlue font-semibold mb-4 pt-12 text-xl sm:text-3xl lg:text-4xl">
             Refund and Cancellation Policy
           </h2>
@@ -287,7 +287,7 @@ However the internet is an ever evolving medium. We may change our Privacy Polic
         </section>
 
         {/* Contact Section */}
-        <section id="contact-info" className="mb-10">
+        <section id="contact-info" className="mb-10 text-gray-700">
            <h2 className="text-deepBlue font-semibold mb-4 pt-12 text-xl sm:text-3xl lg:text-4xl">
             Contact Us
           </h2>

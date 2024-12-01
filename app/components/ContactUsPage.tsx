@@ -12,7 +12,7 @@ const ContactUsPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const whatsappMessage = `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-    window.open(`https://api.whatsapp.com/send?phone=917400363250&text=${encodeURIComponent(whatsappMessage)}`);
+    window.open(`https://api.whatsapp.com/send?phone=917045337426&text=${encodeURIComponent(whatsappMessage)}`);
   };
 
   return (
@@ -29,7 +29,7 @@ const ContactUsPage = () => {
       <div className="flex flex-col sm:flex-row gap-8 mb-12 text-center text-mediumGray">
         <div className="flex flex-col items-center">
           <FaEnvelope className="text-4xl text-brightYellow mb-2" />
-          <span>contact@fluentenglish.com</span>
+          <span>contact@fluenttenglishlive.com</span>
         </div>
         <div className="flex flex-col items-center">
           <FaPhone className="text-4xl text-brightYellow mb-2" />
@@ -45,7 +45,7 @@ const ContactUsPage = () => {
       <div className="flex items-center justify-center gap-4 mb-12 p-4 bg-white rounded-lg shadow-lg hover:scale-105 transform transition-transform duration-300 ease-in-out">
         <FaWhatsapp className="text-green-500 text-3xl" />
         <a
-          href="https://api.whatsapp.com/send?phone=917400363250"
+          href="https://api.whatsapp.com/send?phone=917045337426"
           target="_blank"
           rel="noopener noreferrer"
           className="text-deepBlue font-bold text-lg hover:text-lightBlue transition-colors"

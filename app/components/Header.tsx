@@ -99,7 +99,7 @@ export default function Header() {
         
 
 <div className="hidden md:flex items-center">
-  <Link href="https://api.whatsapp.com/send?phone=917400363250" passHref>
+  <Link href="https://api.whatsapp.com/send?phone=917045337426" passHref>
     <span className="bg-deepBlue text-white text-sm sm:text-base lg:text-lg font-bold px-4 sm:px-6 py-2 rounded-full shadow-md hover:bg-lightBlue hover:shadow-lg transition duration-300 ease-in-out flex items-center space-x-2">
       <span>Chat with   us On</span>
       <FaWhatsapp className=" text-green-500 text-lg sm:text-2xl" />
@@ -161,7 +161,7 @@ export default function Header() {
             </span>
           </Link>
           
-          <Link href="https://api.whatsapp.com/send?phone=917400363250" passHref>
+          <Link href="https://api.whatsapp.com/send?phone=917045337426" passHref>
   <span
     onClick={toggleMenu}
     className="bg-deepBlue text-white text-base font-bold px-6 py-2 rounded-full shadow-md hover:bg-lightBlue transition duration-300 flex items-center space-x-2"
