@@ -47,12 +47,12 @@ export default function Header() {
         {/* Logo and Title */}
        {/* Logo and Title */}
 <div className="flex items-center space-x-3">
-<div className="relative w-30 sm:w-30">
+<div className="relative w-12 sm:w-12">
   <Image
     src="/logo2.png"
     alt="FluentEnglish Logo"
-    width={100} // Provide width and height for aspect ratio reference
-    height={100}
+    width={80} // Provide width and height for aspect ratio reference
+    height={80}
     className="object-contain"
     priority
    
