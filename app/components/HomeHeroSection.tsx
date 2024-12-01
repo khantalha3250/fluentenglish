@@ -51,7 +51,7 @@ const HomeHeroSection = () => {
         {/* Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
           {/* Join Now Button */}
-          <Link href="/classes">
+          <Link href="/join">
             <button
               onClick={handleJoinNowClick}
               className="bg-deepBlue text-white px-8 py-3 rounded-lg shadow-lg hover:bg-lightBlue hover:scale-105 transform transition-all duration-300 ease-in-out"
@@ -61,12 +61,12 @@ const HomeHeroSection = () => {
           </Link>
 
           {/* Learn More Button */}
-          <Link href="/about">
+          <Link href="/programs">
             <button
               onClick={handleLearnMoreClick}
               className="border border-deepBlue text-deepBlue px-8 py-3 rounded-lg hover:bg-brightYellow hover:text-darkGray shadow-md transition-all duration-300 ease-in-out"
             >
-              Learn More
+              Our Programs
             </button>
           </Link>
         </div>

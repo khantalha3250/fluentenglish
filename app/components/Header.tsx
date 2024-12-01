@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Roboto } from "next/font/google";
-
+import { FaWhatsapp } from "react-icons/fa"; 
 // Configure Roboto font
 const roboto = Roboto({
   subsets: ["latin"],
@@ -75,12 +75,12 @@ export default function Header() {
           </Link>
           <Link href="/about" passHref>
             <span className="hover:text-deepBlue text-sm sm:text-base lg:text-lg font-bold transition duration-300 ease-in-out">
-              About
+              About us
             </span>
           </Link>
           <Link href="/classes" passHref>
             <span className="hover:text-deepBlue text-sm sm:text-base lg:text-lg font-bold transition duration-300 ease-in-out">
-             Master Classes
+             MasterClasses
             </span>
           </Link>
           <Link href="/programs" passHref>
@@ -90,19 +90,23 @@ export default function Header() {
           </Link>
           <Link href="/contact" passHref>
             <span className="hover:text-deepBlue text-sm sm:text-base lg:text-lg font-bold transition duration-300 ease-in-out">
-              Contact
+              Contact us
             </span>
           </Link>
         </nav>
 
         {/* Call-to-Action Button (Desktop) */}
-        <div className="hidden md:flex items-center">
-          <Link href="/join" passHref>
-            <span className="bg-deepBlue text-white text-sm sm:text-base lg:text-lg font-bold px-4 sm:px-6 py-2 rounded-full shadow-md hover:bg-lightBlue hover:shadow-lg transition duration-300 ease-in-out">
-              Get Started
-            </span>
-          </Link>
-        </div>
+        
+
+<div className="hidden md:flex items-center">
+  <Link href="https://api.whatsapp.com/send?phone=917400363250" passHref>
+    <span className="bg-deepBlue text-white text-sm sm:text-base lg:text-lg font-bold px-4 sm:px-6 py-2 rounded-full shadow-md hover:bg-lightBlue hover:shadow-lg transition duration-300 ease-in-out flex items-center space-x-2">
+      <span>Chat with   us On</span>
+      <FaWhatsapp className=" text-green-500 text-lg sm:text-2xl" />
+    </span>
+  </Link>
+</div>
+
 
         {/* Mobile Menu Button */}
         <button
@@ -129,7 +133,7 @@ export default function Header() {
               onClick={toggleMenu}
               className="text-darkGray hover:text-deepBlue text-base font-bold transition duration-300"
             >
-              About
+              About us
             </span>
           </Link>
           <Link href="/classes" passHref>
@@ -137,15 +141,7 @@ export default function Header() {
               onClick={toggleMenu}
               className="text-darkGray hover:text-deepBlue text-base font-bold transition duration-300"
             >
-              Classes
-            </span>
-          </Link>
-          <Link href="/contact" passHref>
-            <span
-              onClick={toggleMenu}
-              className="text-darkGray hover:text-deepBlue text-base font-bold transition duration-300"
-            >
-              Contact
+              MasterClasses
             </span>
           </Link>
           <Link href="/programs" passHref>
@@ -156,14 +152,24 @@ export default function Header() {
               Programs
             </span>
           </Link>
-          <Link href="/join" passHref>
+          <Link href="/contact" passHref>
             <span
               onClick={toggleMenu}
-              className="bg-deepBlue text-white text-base font-bold px-6 py-2 rounded-full shadow-md hover:bg-lightBlue transition duration-300"
+              className="text-darkGray hover:text-deepBlue text-base font-bold transition duration-300"
             >
-              Get Started
+              Contact us
             </span>
           </Link>
+          
+          <Link href="https://api.whatsapp.com/send?phone=917400363250" passHref>
+  <span
+    onClick={toggleMenu}
+    className="bg-deepBlue text-white text-base font-bold px-6 py-2 rounded-full shadow-md hover:bg-lightBlue transition duration-300 flex items-center space-x-2"
+  >
+    <span>Chat with us on</span>
+    <FaWhatsapp className="text-green-500 text-lg sm:text-2xl" />
+  </span>
+</Link>
         </div>
       )}
     </header>

@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function Programs() {
      const programs = [
         {
-          title: "Program 1: For Basic to Advanced Level",
+          title: "For Basic to Advanced Level",
           variants: [
             {
               name: "For Beginners - Extended Program",
@@ -78,7 +78,7 @@ export default function Programs() {
           ],
         },
         {
-          title: "Program 4: For IELTS Preparation",
+          title: "For IELTS Preparation",
           variants: [
             {
               name: "Academic Extended Program",
@@ -122,7 +122,7 @@ export default function Programs() {
     className="inline-flex items-center gap-2 bg-brightYellow text-darkGray font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
   >
     <FaWhatsapp className="text-green-500 text-2xl" />
-    Need help? Chat with us on WhatsApp!
+    Need help? Chat with a Counselor!
   </a>
 </div>
 

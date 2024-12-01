@@ -33,11 +33,11 @@ const ContactUsPage = () => {
         </div>
         <div className="flex flex-col items-center">
           <FaPhone className="text-4xl text-brightYellow mb-2" />
-          <span>+1 (234) 567-890</span>
+          <span>+91-8454974682</span>
         </div>
         <div className="flex flex-col items-center">
           <FaMapMarkerAlt className="text-4xl text-brightYellow mb-2" />
-          <span>123 Fluent St., Language City, ENG</span>
+          <span>11/2 First floor , Sakinaka industrial estate,near saki naka metro Andheri East 400072</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ const ContactUsPage = () => {
           rel="noopener noreferrer"
           className="text-deepBlue font-bold text-lg hover:text-lightBlue transition-colors"
         >
-          Chat with us on WhatsApp 
+          Chat with us on WhatsApp
         </a>
       </div>
 
@@ -63,7 +63,7 @@ const ContactUsPage = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-lightGray rounded-lg focus:outline-none focus:border-deepBlue"
+            className="w-full px-4 py-2 border border-lightGray rounded-lg text-deepBlue focus:outline-none focus:border-deepBlue"
             required
           />
         </div>
@@ -74,7 +74,7 @@ const ContactUsPage = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-lightGray rounded-lg focus:outline-none focus:border-deepBlue"
+            className="w-full px-4 py-2 border border-lightGray rounded-lg text-deepBlue focus:outline-none focus:border-deepBlue"
             required
           />
         </div>
@@ -84,21 +84,20 @@ const ContactUsPage = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-lightGray rounded-lg focus:outline-none focus:border-deepBlue"
+            className="w-full px-4 py-2 border border-lightGray rounded-lg text-deepBlue focus:outline-none focus:border-deepBlue"
             rows={4}
             required
           ></textarea>
         </div>
         <div className="w-full max-w-xs mx-auto bg-deepBlue text-white flex items-center justify-center gap-3 py-3 px-4 rounded-lg shadow-lg hover:bg-lightBlue transform hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-  <button
-    type="submit"
-    className="text-lg font-semibold flex items-center gap-2 focus:outline-none"
-  >
-    Send Message
-    <FaWhatsapp className="text-green-500 text-2xl" />
-  </button>
-</div>
-
+          <button
+            type="submit"
+            className="text-lg font-semibold flex items-center gap-2 focus:outline-none"
+          >
+            Send Message
+            <FaWhatsapp className="text-green-500 text-2xl" />
+          </button>
+        </div>
       </form>
     </section>
   );

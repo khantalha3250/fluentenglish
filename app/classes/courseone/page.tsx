@@ -22,7 +22,7 @@ const offerings = [
   {
     icon: FaBriefcase,
     title: "Career-Centric Skills",
-    description: "Focused on enhancing business communication, presentations, and professional conversations to help you succeed in your career."
+    description: "Specialized in enhancing business communication and presentation abilities, with expertise in engaging foreign-speaking partners using a European or British accent for professional conversations, helping you excel in your career."
   },
 ];
 const keyCourseBenefits = [

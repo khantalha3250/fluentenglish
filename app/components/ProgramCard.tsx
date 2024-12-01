@@ -14,7 +14,7 @@ interface ProgramCardProps {
         </p>
   
         {/* Details */}
-        <ul className="text-mediumGray text-sm md:text-base space-y-2">
+        <ul className="text-gray-600 text-sm md:text-base space-y-2">
           {details.map((detail, index) => (
             <li key={index} className="flex items-center">
               <span className="text-brightYellow mr-2">•</span>
