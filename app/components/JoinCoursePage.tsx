@@ -126,7 +126,7 @@ const JoinCoursePage: React.FC = () => {
               value={formData.countryCode}
               onChange={handleInputChange}
               required
-              className="px-3 py-2 border border-lightGray rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-lightBlue transition-all duration-300 bg-white"
+              className="px-3 py-2 w-1/2 border border-lightGray rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-lightBlue transition-all duration-300 bg-white"
             >
               <option value="+1">+1 (US)</option>
               <option value="+44">+44 (UK)</option>
