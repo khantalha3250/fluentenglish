@@ -18,6 +18,8 @@ const JoinCoursePage: React.FC = () => {
     type: "success" | "error";
   } | null>(null);
 
+  const [loading, setLoading] = useState(false); // Track loading state
+
   const handleInputChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -27,46 +29,50 @@ const JoinCoursePage: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbx4y1aDHxuZaauHEr0_Z31fuQMJp4AxSvdo7GuEXrFIditmKeCkGW57-GnYP9PsySLz/exec"; // Replace with your Web App URL
+    if (loading) return; // Prevent multiple submissions
+    setLoading(true); // Set loading state to true
 
-    fetch(scriptURL, {
-      method: "POST",
-      body: new FormData(document.forms[0]), // Ensure the form tag has `name="join-course-form"`
-    })
-      .then((response) => {
-        if (response.ok) {
-          setAlert({
-            message:
-              "Thank you for your interest! Stay connected—we’ll be reaching out to you soon",
-            type: "success",
-          });
-          setFormData({
-            name: "",
-            email: "",
-            phoneNumber: "",
-            countryCode: "+1",
-            currentLevel: "",
-            preferredSlot: "",
-            budget: "",
-          });
-        } else {
-          throw new Error("Submission failed.");
-        }
-      })
-      .catch((error) => {
-        console.error("Submission Error:", error); // Log the error for debugging
-        setAlert({
-          message: `Oops! Something went wrong. Error: ${error.message}`,
-          type: "error",
-        });
-      })
-      .finally(() => {
-        setTimeout(() => setAlert(null), 5000); // Hide alert after 5 seconds
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx4y1aDHxuZaauHEr0_Z31fuQMJp4AxSvdo7GuEXrFIditmKeCkGW57-GnYP9PsySLz/exec"; 
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(document.forms[0]), 
       });
+
+      if (response.ok) {
+        setAlert({
+          message:
+            "Thank you for your interest! Stay connected—we’ll be reaching out to you soon",
+          type: "success",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          countryCode: "+1",
+          currentLevel: "",
+          preferredSlot: "",
+          budget: "",
+        });
+      } else {
+        throw new Error("Submission failed.");
+      }
+    } catch (error) {
+      console.error("Submission Error:", error); // Log the error for debugging
+      setAlert({
+        message: `Oops! Something went wrong. Error: ${
+          (error as Error).message
+        }`,
+        type: "error",
+      });
+    } finally {
+      setLoading(false); // Reset loading state
+      setTimeout(() => setAlert(null), 5000); // Hide alert after 5 seconds
+    }
   };
 
   return (
@@ -115,8 +121,8 @@ const JoinCoursePage: React.FC = () => {
           />
         </div>
 
-        {/* Phone Number with Country Code */}
-        <div className="mb-4">
+              {/* Phone Number with Country Code */}
+              <div className="mb-4">
           <label className="block text-deepBlue font-semibold mb-2">
             Phone Number
           </label>
@@ -239,9 +245,40 @@ const JoinCoursePage: React.FC = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-brightYellow text-darkGray font-bold py-3 rounded-lg shadow-lg hover:bg-vibrantCoral hover:text-white transition-transform duration-300 transform hover:scale-105"
+          disabled={loading} // Disable button when loading
+          className={`w-full bg-brightYellow text-darkGray font-bold py-3 rounded-lg shadow-lg transition-transform duration-300 transform ${
+            loading
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-vibrantCoral hover:text-white hover:scale-105"
+          }`}
         >
-          Join Now
+          {loading ? (
+            <div className="flex items-center justify-center">
+              <svg
+                className="animate-spin h-5 w-5 text-white mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Submitting...
+            </div>
+          ) : (
+            "Join Now"
+          )}
         </button>
       </form>
     </section>

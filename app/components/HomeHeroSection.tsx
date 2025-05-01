@@ -18,7 +18,7 @@ const HomeHeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/img2.png" // Replace with the actual background image path
+          src="/img2.png" 
           alt="Background"
           fill
           className="object-contain sm:object-cover object-center opacity-60"

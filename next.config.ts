@@ -18,20 +18,7 @@ const nextConfig: NextConfig = {
 
   // React strict mode for catching issues during development
   reactStrictMode: true,
-
-  // Optional: Add headers or rewrites for advanced use cases (if supported by the hosting provider)
-  headers: async () => [
-    {
-      source: "/(.*)",
-      headers: [
-        {
-          key: "Cache-Control",
-          value: "public, max-age=31536000, immutable",
-        },
-      ],
-    },
-  ],
-
+  
   // Adjust page extensions if you use custom ones (e.g., `.jsx`, `.ts`)
   pageExtensions: ["js", "jsx", "ts", "tsx"],
 };
