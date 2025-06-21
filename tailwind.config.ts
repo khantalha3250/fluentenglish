@@ -18,6 +18,10 @@ const config: Config = {
         lightGray: '#E5E7EB',
         brightYellow: '#FFD166',
         vibrantCoral: '#FF6B6B',
+                golden: '#f59e0b',
+        purple: {
+          900: '#4c1d95',
+        }
       },
     },
     

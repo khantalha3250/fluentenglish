@@ -1,5 +1,6 @@
 import ProgramCard from "./ProgramCard";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaCrown} from "react-icons/fa";
+import Link from "next/link";
 export default function Programs() {
      const programs = [
         {
@@ -106,27 +107,42 @@ export default function Programs() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-softSkyBlue to-lightGray">
-      <header className="bg-deepBlue text-white py-16 text-center">
+      <header className="bg-deepBlue text-white py-16 text-center relative">
+        {/* Premium Ribbon */}
+        <div className="absolute top-4 right-4 bg-gradient-to-r from-golden to-yellow-500 text-deepBlue font-bold py-2 px-4 rounded-lg shadow-lg transform rotate-6">
+          <FaCrown className="inline mr-2" />
+          Premium Courses Available!
+        </div>
+        
         <h1 className="text-4xl sm:text-3xl font-extrabold drop-shadow-md pt-6">
           Our Programs
         </h1>
         <p className="text-lg sm:text-base mt-4 max-w-3xl mx-auto">
           Find the right program tailored to your needs and achieve your English fluency goals with expert guidance.
         </p>
-        {/* WhatsApp Button */}
-        <div className="mt-6 flex justify-center">
-  <a
-    href="https://api.whatsapp.com/send?phone=917045337426"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 bg-brightYellow text-darkGray font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
-  >
-    <FaWhatsapp className="text-green-500 text-2xl" />
-    Need help? Chat with a Counselor!
-  </a>
-</div>
-
-
+        
+        {/* Action Buttons Container */}
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          {/* WhatsApp Button */}
+          <a
+            href="https://api.whatsapp.com/send?phone=917045337426"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-brightYellow text-darkGray font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
+          >
+            <FaWhatsapp className="text-green-500 text-2xl" />
+            Chat with Counselor
+          </a>
+          
+          {/* Premium Courses Button */}
+          <Link
+            href="/premium-courses"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-golden to-yellow-500 text-deepBlue font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+          >
+            <FaCrown className="text-xl" />
+            Explore Premium Courses
+          </Link>
+        </div>
       </header>
 
       <main className="max-w-7xl mx-auto py-16 px-8">
