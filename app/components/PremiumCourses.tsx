@@ -5,59 +5,75 @@ import Link from "next/link";
 const PremiumCourses = () => {
   const premiumPrograms = [
     {
-      title: "🚀 PROTRACTED PROGRAM",
-      subtitle: "For Advanced Language Mastery",
+      title: "🚀 PROTRACTED TANDEM PROGRAM",
+      subtitle: "(Tandem Group: 5–7 Participants)",
       duration: "6 to 8 Months",
+      actualFee: "₹4000/-",
+      discountedFee: "₹2200/-",
+      enrollLink: "https://payments.cashfree.com/forms/enrllform4",
       details: [
-        "Dedicated personal tutor",
-        "100 One-on-One Personalized Classes",
+        "90 Interactive Group Sessions",
         "150+ Hours of Classes & Guided Student Practice",
         "Focus: Public Speaking, Confidence, and High-Level Communication",
         "Includes Practice with a Foreign Speaking Partner",
-        "Guaranteed CEFR Level 2 Improvement"
+        "Guaranteed CEFR Level 2 Improvement",
       ],
-      description: "This long-term, immersive program is built for learners who aim for deep, lasting progress. With personal mentorship, structured skill-building, and real conversational practice, you'll unlock higher levels of fluency and confidence."
-    },
-    {
-      title: "🌟 EXTENDED PROGRAM",
-      subtitle: "For Focused Language Progress",
-      duration: "3 to 4 Months",
-      details: [
-        "Dedicated, Certified Personal Trainer",
-        "50 One-on-One Personal Classes",
-        "Speaking Partner Practice Hours Included",
-        "Guaranteed CEFR Level I Improvement",
-        "75+ Hours of Student Practice"
-      ],
-      description: "Designed for learners who want structured progress and personalized support. This program combines private coaching, guided practice, and real-world conversation to help you confidently level up your communication skills."
+      description:
+        "Perfect for learners aiming for deep, lasting fluency and confidence in real-world communication. Join a small group, grow with personal guidance, and speak like a pro.",
     },
     {
       title: "🌍 EXTENDED TANDEM PROGRAM",
       subtitle: "(Tandem Group: 5–7 Participants)",
       duration: "3–4 Months",
+      actualFee: "₹2500/-",
+      discountedFee: "₹1200/-",
+      enrollLink: "https://payments.cashfree.com/forms/Enrollform3",
       details: [
         "Goal: Guaranteed improvement in CEFR Level I",
         "Focus: Public Speaking, Confidence, and Real-World Communication",
         "75+ Hours of Student Practice",
         "45 Interactive Group Sessions",
         "Personalized Support in a Collaborative Setting",
-        "Real-Time Feedback & Performance Tracking"
+        "Real-Time Feedback & Performance Tracking",
       ],
-      description: "Experience collaborative learning in a small group setting where you'll practice real-world communication skills and receive personalized feedback."
+      description:
+        "Collaborative group program with personalized feedback and structured growth in public speaking and confidence.",
     },
     {
-      title: "🚀 PROTRACTED TANDEM PROGRAM",
-      subtitle: "(Tandem Group: 5–7 Participants)",
-      duration: "6 to 8 Months",
+      title: "🌟 EXTENDED PROGRAM",
+      subtitle: "For Focused Language Progress",
+      duration: "3 to 4 Months",
+      actualFee: "₹14000/-",
+      discountedFee: "₹10000/-",
+      enrollLink: "https://payments.cashfree.com/forms/enrollform1",
       details: [
-        "90 Interactive Group Sessions",
+        "Dedicated, Certified Personal Trainer",
+        "50 One-on-One Personal Classes",
+        "Speaking Partner Practice Hours Included",
+        "Guaranteed CEFR Level I Improvement",
+        "75+ Hours of Student Practice",
+      ],
+      description:
+        "For learners seeking structured progress with one-on-one coaching and real-life speaking practice.",
+    },
+    {
+      title: "🚀 PROTRACTED PROGRAM",
+      subtitle: "For Advanced Language Mastery",
+      duration: "6 to 8 Months",
+      actualFee: "₹25000/-",
+      discountedFee: "₹18000/-",
+      enrollLink: "https://payments.cashfree.com/forms/Enrollform2",
+      details: [
+        "Dedicated personal tutor",
+        "100 One-on-One Personalized Classes",
         "150+ Hours of Classes & Guided Student Practice",
         "Focus: Public Speaking, Confidence, and High-Level Communication",
         "Includes Practice with a Foreign Speaking Partner",
-        "Guaranteed CEFR Level 2 Improvement"
+        "Guaranteed CEFR Level 2 Improvement",
       ],
-      description: "Our most comprehensive group program offers extended practice with international speaking partners and guaranteed advancement to higher proficiency levels."
-    }
+      description:
+        "A long-term immersive course with mentorship and deep learning for fluency and confidence.",
+    },
   ];
 
   return (
@@ -96,7 +112,7 @@ const PremiumCourses = () => {
               className="bg-white rounded-2xl shadow-xl border border-golden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
             >
               <div className="p-5 md:p-6">
-                <div className="flex items-start">
+                <div className="flex items-start mb-2">
                   <h2 className="text-deepBlue font-bold text-lg md:text-xl flex-1 truncate">
                     {program.title}
                   </h2>
@@ -104,7 +120,18 @@ const PremiumCourses = () => {
                     PREMIUM
                   </span>
                 </div>
-                <p className="text-mediumGray text-sm mt-1 mb-3">{program.subtitle}</p>
+
+                <p className="text-mediumGray text-sm mb-2">{program.subtitle}</p>
+
+                {/* Pricing Info */}
+                <div className="mb-3">
+                  <p className="text-sm text-darkGray font-semibold">
+                    💰 Actual Fee: <span className="line-through">{program.actualFee}</span>
+                  </p>
+                  <p className="text-sm text-green-600 font-semibold">
+                    🔥 Now Only: {program.discountedFee}
+                  </p>
+                </div>
 
                 <div className="bg-softSkyBlue rounded-lg px-3 py-2 text-deepBlue font-semibold mb-4 text-sm md:text-base">
                   🕒 Duration: {program.duration}
@@ -119,18 +146,16 @@ const PremiumCourses = () => {
                   ))}
                 </ul>
 
-                {program.description && (
-                  <p className="text-sm text-mediumGray mt-3">{program.description}</p>
-                )}
+                <p className="text-sm text-mediumGray mt-3">{program.description}</p>
               </div>
 
+              {/* Enroll Button */}
               <div className="px-5 md:px-6 py-4">
-<a href="https://payments.cashfree.com/forms/enrllform4" target="_blank">
-  <button className="w-full bg-brightYellow text-darkGray font-bold py-2 md:py-3 rounded-lg hover:scale-[1.02] transform transition-all duration-300 shadow-lg">
-    Enroll Now
-  </button>
-</a>
-
+                <a href={program.enrollLink} target="_blank" rel="noopener noreferrer">
+                  <button className="w-full bg-brightYellow text-darkGray font-bold py-2 md:py-3 rounded-lg hover:scale-[1.02] transform transition-all duration-300 shadow-lg">
+                    Enroll Now
+                  </button>
+                </a>
               </div>
             </div>
           ))}
