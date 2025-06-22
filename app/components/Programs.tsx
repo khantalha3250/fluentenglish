@@ -125,7 +125,7 @@ export default function Programs() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           {/* WhatsApp Button */}
           <a
-            href="https://api.whatsapp.com/send?phone=917045337426"
+            href="https://api.whatsapp.com/send?phone=918828536935"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brightYellow text-darkGray font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
