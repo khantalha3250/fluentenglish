@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="md:w-1/3 text-center md:text-right">
           <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>
           <p className="text-mediumGray">Email: admin@fluenttenglishlive.com</p>
-          <p className="text-mediumGray">Phone:  +91-8454974682</p>
+          <p className="text-mediumGray">Phone:  +91-8828536935</p>
           <p className="text-mediumGray">11/2 First floor , Sakinaka industrial estate,near saki naka metro Andheri East 400072</p>
 
           {/* Social Media Icons */}
